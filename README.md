@@ -18,5 +18,5 @@ To ensure robustness, the solution bypasses common legacy execution hurdles:
 
 1. **Prerequisites:**
    Ensure the Microsoft Graph PowerShell SDK is installed on your management endpoint:
-   Powershell:
+   ```Powershell
    Install-Module Microsoft.Graph -Scope CurrentUser
