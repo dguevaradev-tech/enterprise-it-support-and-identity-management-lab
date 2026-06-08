@@ -1,11 +1,11 @@
 # Engineering & Troubleshooting Documentation: Cloud Provisioning Pipeline
 
-## 📊 Project Evolution Overview
+## Project Evolution Overview
 This document chronicles the technical challenges, architectural pivots, and security considerations encountered during the development of the **Entra ID Automated User Provisioning Engine**. The project evolved from a standard human-interactive script into a hardened, non-interactive enterprise API data pipeline.
 
 ---
 
-## 🔍 Phase 1: The Multi-Tenant Handshake Failure
+## Phase 1: The Multi-Tenant Handshake Failure
 ### The Approach
 The initial plan utilized standard interactive device code authentication (`Connect-MgGraph -UseDeviceAuthentication`) without explicitly scoping a target directory backend, assuming the administrator account would natively route to its home environment.
 
@@ -22,7 +22,7 @@ The execution command was modified to hard-code the target directory environment
 Connect-MgGraph -UseDeviceAuthentication -TenantId "dguevaratechoutlook.onmicrosoft.com"
 ```
 
-## 🔒 Phase 2: The User Consent Latch
+## Phase 2: The User Consent Latch
 
 ### The Approach
 Once directory routing was fixed, a dedicated internal admin account (`Admin1@dguevaratechoutlook.onmicrosoft.com`) was deployed to log in via the device-code webpage to grant permissions to the Microsoft Graph Command Line Tools application.
@@ -38,7 +38,7 @@ The browser blocked the connection with an **Admin Approval Required** warning. 
 ### The Fix
 The master creator root account (`dguevaratech_outlook.com#EXT#...`) was used to execute a one-time tenant-wide authorization bypass by explicitly checking the **"Consent on behalf of your organization"** checkbox during the OAuth login flow, permanently unlocking the application footprint for all directory sub-admins.
 
-## 🔄 Phase 3: The Interactive Token-Drop Loop
+## Phase 3: The Interactive Token-Drop Loop
 
 ### The Approach
 With applications approved, the script was executed to process a flat-file database loop using interactive device codes:
@@ -62,7 +62,7 @@ The Microsoft Graph SDK treats initial device-code tokens as ephemeral handshake
 
 `Get-Credential` **Inline Object:** Attempted to pass credentials directly inside the command line via a local popup box (`Connect-MgGraph -Credential`). Result: _Critical Syntax Failure_ (`AmbiguousParameterSet`). Microsoft recently stripped the native `-Credential` string parameter out of `Connect-MgGraph` to completely deprecate human-password passing inside scripts.
 
-## ⚡ Phase 4: Shifting to Enterprise Architecture (The Final Product)
+## Phase 4: Shifting to Enterprise Architecture (The Final Product)
 
 ### The Approach
 To bypass human web components completely, the project completely abandoned interactive login states and pivoted to an industry-standard **Service Principal Client Secret** architecture.
@@ -72,7 +72,7 @@ The script was registered inside Entra ID as an autonomous enterprise applicatio
 ### Why it Succeeded
 By authenticating as an application (apponly access) rather than a human user, the authentication token became bound globally to a secure PSCredential memory object. This allowed the foreach loop to process 5, 50, or 5000 users in a single non-interactive stream without dropping the cloud session.
 
-## 🛠️ Phase 5: Troubleshooting Syntax Formatting
+## Phase 5: Troubleshooting Syntax Formatting
 
 ### The Approach
 During the initial run of the service principal script, the terminal returned a repetitive red error block:
@@ -104,7 +104,7 @@ $UserParams = @{
 }
 New-MgUser @UserParams
 ```
-## 🛡️ Critical Repository Security Measures
+## Critical Repository Security Measures
 To ensure this repository remains completely secure for a public GitHub portfolio, the following security constraints have been hardcoded into the workflow:
 
 | Layer | Potential Threat Vector | Mitigating Engineering Control |
