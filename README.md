@@ -1,4 +1,4 @@
-# Entra ID Automated User Provisioning Engine
+# Microsoft Entra ID Automated User Provisioning Engine
 
 ## Project Overview
 This project demonstrates an enterprise-grade automation solution for provisioning user lifecycles inside Microsoft Entra ID (Azure Active Directory) using PowerShell and the Microsoft Graph API. It transitions away from buggy interactive user-login sessions by leveraging a **Service Principal Application Registration (Client Secret Auth)** to silently and securely stream bulk identities from an on-premises CSV flat-file directly into a cloud directory database.
