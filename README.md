@@ -19,5 +19,5 @@ The project is structured into two core operational phases:
 
 ## 📂 Repository Structure
 ```text
-├── microsoft-entra-id        # 
+├── microsoft-entra-id        # Microsoft Entra ID Automated User Provisioning Engine
 ├── 
