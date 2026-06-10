@@ -13,7 +13,7 @@ The project is structured into two core operational phases:
 * **Cloud Directory & Security:** Microsoft Entra ID (Azure AD), OAuth 2.0, RBAC, Service Principals
 * **Automation & Scripting:** Windows PowerShell 5.1+, Microsoft.Graph PowerShell SDK, Parameter Splatting
 * **IT Service Management (ITSM):** Jira Service Management, ITIL Framework (Incidents, Service Requests, Escalation Matrices)
-* **Hardware Architecture:** Local Windows 11 Sandbox environment virtualized via UTM on Apple Silicon (Mac M2)
+* **Hardware Architecture:** Local Windows 11 Sandbox environment virtualized via VirtualBox on Apple Silicon (Mac M2)
 
 ---
 
