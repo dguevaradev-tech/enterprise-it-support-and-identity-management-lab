@@ -1,4 +1,3 @@
-### File 2: `KB00195-OneDrive-Fix.md`
 # KB00195: OneDrive for Business Sync Engine Reset Playbook
 
 ## Symptoms
@@ -10,9 +9,10 @@
 2. Scroll to Generic Credentials and remove all entries starting with `MicrosoftOffice16_Data`.
 3. Open the Run dialog (`Win + R`).
 4. Execute the application reset command:
-```text
+```PowerShell
    %localappdata%\Microsoft\OneDrive\onedrive.exe /reset
-Wait 60 seconds. If the cloud icon does not reappear in the system tray, manually relaunch it by running:
+```
+- Wait 60 seconds. If the cloud icon does not reappear in the system tray, manually relaunch it by running:
 ``` PowerShell
    %localappdata%\Microsoft\OneDrive\onedrive.exe
 ```
