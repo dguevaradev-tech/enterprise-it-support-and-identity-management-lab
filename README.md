@@ -24,12 +24,12 @@ This comprehensive portfolio lab demonstrates the implementation, management, an
 ### 1. Cloud Identity Governance (Microsoft Entra ID)
 To simulate rapid organizational onboarding, I engineered an automated user-provisioning solution. A custom PowerShell engine ingests corporate identity matrices to automatically map organizational units, build compliant User Principal Names (UPNs), assign department attributes (HR, Finance, Operations), and enforce temporary credential security boundaries.
 * **Security Control Enforced:** Implemented immediate password rotation rules (`ForceChangePasswordNextSignIn = $true`) to protect accounts during the initial cloud onboarding phase.
-* **Artifacts:** `script.md` and verification captures inside `powershell-success.md and azure.users.md`.
+* **Artifacts:** In `/microsoft-entra-id/`:`script.md` and verification captures inside `powershell-success.md and azure.users.md`.
 
 ### 2. Programmatic Incident Ingestion (Jira Service Desk)
 Rather than manually logging help desk issues, I built an automated incident injection system. This engine leverages PowerShell to convert simulated corporate hardware and software failures into JSON payloads, passing them securely through a Base64-authenticated Atlassian REST gateway.
 * **Ticketing Lifecycle:** Managed incoming triaged alerts, applied custom metadata labels, and practiced enterprise workflows from Tier-1 intake up to formal Tier-2 engineering escalations.
-* **Artifacts:** `script.md` and live portal dashboard screenshots in `images.md`.
+* **Artifacts:** In `/jira-integration/`:`script.md` and live portal dashboard screenshots in `images.md`.
 
 ### 3. Microsoft 365 Workspace Optimization (Knowledge Base)
 To resolve recurring enterprise client disruptions, I authored a standardized internal knowledge base following professional ITIL documentation practices. These playbooks provide help desk personnel with clear, step-by-step Standard Operating Procedures (SOPs) to resolve profile corruptions and sync locks efficiently.
