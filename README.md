@@ -24,7 +24,7 @@ This comprehensive portfolio lab demonstrates the implementation, management, an
 ### 1. Cloud Identity Governance (Microsoft Entra ID)
 To simulate rapid organizational onboarding, I engineered an automated user-provisioning solution. A custom PowerShell engine ingests corporate identity matrices to automatically map organizational units, build compliant User Principal Names (UPNs), assign department attributes (HR, Finance, Operations), and enforce temporary credential security boundaries.
 * **Security Control Enforced:** Implemented immediate password rotation rules (`ForceChangePasswordNextSignIn = $true`) to protect accounts during the initial cloud onboarding phase.
-* **Artifacts:** `scripts/ProvisionUsers.ps1` and verification captures inside `documentation/user-provisioning/`.
+* **Artifacts:** `script.md` and verification captures inside `PowerShell.md`.
 
 ### 2. Programmatic Incident Ingestion (Jira Service Desk)
 Rather than manually logging help desk issues, I built an automated incident injection system. This engine leverages PowerShell to convert simulated corporate hardware and software failures into JSON payloads, passing them securely through a Base64-authenticated Atlassian REST gateway.
