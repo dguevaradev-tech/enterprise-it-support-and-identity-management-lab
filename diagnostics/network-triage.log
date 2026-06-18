@@ -12,7 +12,8 @@ Request timeout for icmp_seq 3
 
 --- 10.0.4.15 ping statistics ---
 4 packets transmitted, 0 packets received, 100.0% packet loss
-DIAGNOSIS: Layer 3 connectivity failure or endpoint is dropping ICMP traffic.
+
+* DIAGNOSIS: Layer 3 connectivity failure or endpoint is dropping ICMP traffic. *
 
 [STEP 2: PATH TRACE ANALYSIS]
 Command: traceroute 10.0.4.15 (Mac/Linux Client)
@@ -21,5 +22,6 @@ Output:
  2  96.120.42.12 (isp-gateway.miami.rr.com)  12.451 ms  11.892 ms  14.210 ms [ISP Hop]
  3  * * * [Request Timed Out]
  4  * * * [Request Timed Out]
-DIAGNOSIS: Traffic successfully leaves the user's home network and passes the Miami ISP gateway, but gets permanently blocked at the perimeter edge firewall. 
+
+* DIAGNOSIS: Traffic successfully leaves the user's home network and passes the ISP gateway, but gets permanently blocked at the perimeter edge firewall. * 
 ACTION: Escalated to network security team to whitelist user's dynamic IP block on the perimeter ACL.
