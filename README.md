@@ -47,7 +47,7 @@ Simulating modern corporate offices running diverse systems, I compiled operatio
 
 ## 📂 Repository Structure
 ```text
-├── microsoft-entra-id                # Microsoft Entra ID Automated User Provisioning Engine
-├── jira-integration                  # Programmatic Incident Ingestion & Service Desk Engine
-├── kb-articles                       # ITIL-Aligned Internal Knowledge Base Documentation
-├── cross-platform-diagnostics        # Heterogeneous OS Infrastructure Triage Records
+├── microsoft-entra-id           # Microsoft Entra ID Automated User Provisioning Engine
+├── jira-integration             # Programmatic Incident Ingestion & Service Desk Engine
+├── kb-articles                  # ITIL-Aligned Internal Knowledge Base Documentation
+├── diagnostics                  # Heterogeneous OS Infrastructure Triage Records
