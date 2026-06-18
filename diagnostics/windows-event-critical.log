@@ -1,0 +1,24 @@
+=== WINDOWS COMPONENT DIAGNOSTIC SOURCE LOG ===
+Provider: Event Viewer (Application & System Log Export)
+Channel: System
+Level: Critical
+Event ID: 41
+Source: Kernel-Power
+
+[XML VIEW / DATA ATTRIBUTES]
+- System 
+  - Provider 
+    [ Name]  Microsoft-Windows-Kernel-Power 
+  - EventID 41 
+  - Level 1 (Critical) 
+  - Task 63 
+  - Keywords 0x8000400000000002 
+- EventData 
+  BugcheckCode 278 (0x116) 
+  BugcheckParameter1 0xFFFFFA800B241010 
+  BugcheckParameter2 0xFFFFF880042A5C10 
+  SleepInProgress false 
+  LongPowerButtonPress false 
+
+DIAGNOSIS: Bugcheck 0x116 points explicitly to VIDEO_TDR_ERROR (Timeout, Detection, and Recovery). The Windows system graphics driver sub-engine attempted to reset the GPU display driver, but failed within the allotted kernel timeout window, forcing an intentional system crash (BSOD).
+ACTION: Uninstalled corrupted display drivers via Safe Mode utilizing DDU; deployed stable, certified enterprise OEM display adapter package version 551.xx. System verified stable under 4 hour load test.
