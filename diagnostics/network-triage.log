@@ -17,7 +17,7 @@ Request timeout for icmp_seq 3
 * DIAGNOSIS: Layer 3 connectivity failure or endpoint is dropping ICMP traffic. *
 
 [STEP 2: PATH TRACE ANALYSIS]
-Command: traceroute 10.0.4.15 (Mac/Linux Client)
+Command: traceroute -m 4 10.0.4.15 (Mac/Linux Client)
 Output:
  1  192.168.x.x (192.168.x.x)  1.421 ms  1.112 ms  0.982 ms  [Local Router]
  2  96.120.x.x (isp-gateway.CITY.rr.com)  12.451 ms  11.892 ms  14.210 ms [ISP Hop]
