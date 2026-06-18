@@ -13,6 +13,7 @@ Request timeout for icmp_seq 3
 --- 10.0.4.15 ping statistics ---
 4 packets transmitted, 0 packets received, 100.0% packet loss
 
+
 * DIAGNOSIS: Layer 3 connectivity failure or endpoint is dropping ICMP traffic. *
 
 [STEP 2: PATH TRACE ANALYSIS]
