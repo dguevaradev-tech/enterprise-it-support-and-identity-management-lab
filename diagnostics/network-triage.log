@@ -18,8 +18,8 @@ Request timeout for icmp_seq 3
 [STEP 2: PATH TRACE ANALYSIS]
 Command: traceroute 10.0.4.15 (Mac/Linux Client)
 Output:
- 1  192.168.1.1 (192.168.1.1)  1.421 ms  1.112 ms  0.982 ms  [Local Router]
- 2  96.120.42.12 (isp-gateway.miami.rr.com)  12.451 ms  11.892 ms  14.210 ms [ISP Hop]
+ 1  192.168.x.x (192.168.x.x)  1.421 ms  1.112 ms  0.982 ms  [Local Router]
+ 2  96.120.x.x (isp-gateway.CITY.rr.com)  12.451 ms  11.892 ms  14.210 ms [ISP Hop]
  3  * * * [Request Timed Out]
  4  * * * [Request Timed Out]
 
